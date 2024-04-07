@@ -11,8 +11,8 @@ const AppLayout = () => {
     <Container fluid>
     <Navbar.Brand href="#">
           <img
-            width={100}
-            src="https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png"
+            width={80}
+            src="https://cdn.vox-cdn.com/thumbor/SEEvZdiXcs0CS-YbPj2gm6AJ8qc=/0x0:3151x2048/1400x1400/filters:focal(1575x1024:1576x1025)/cdn.vox-cdn.com/uploads/chorus_asset/file/15844974/netflixlogo.0.0.1466448626.png"
           />
         </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbarScroll" />
