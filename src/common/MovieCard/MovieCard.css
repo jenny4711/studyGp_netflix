@@ -27,3 +27,11 @@
 .under18{
   width:40px;
 }
+@media only screen and (max-width:768px){
+  .movieCard{
+    margin:3rem;
+    width: 100% !important;
+    
+  }
+ 
+}

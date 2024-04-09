@@ -1,9 +1,10 @@
 import React from 'react';
-import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
+import { useUpcomingMovies } from '../../../../hooks/useMovies';
 import {Alert} from 'react-bootstrap'
 import Slider from '../../../../common/Slider/Slider'
-const PopularMoviesSlide = () => {
-  const {data,isLoading,isError,error}=usePopularMoviesQuery()
+
+const UpcomingMovies = () => {
+  const {data,isLoading,isError,error}=useUpcomingMovies()
   if(isLoading) {
     return <h1>isLoading</h1>
   }
@@ -12,10 +13,10 @@ const PopularMoviesSlide = () => {
   }
   return (
     <div>
-      <h3>Popular Movies</h3>
-      <Slider data={data} />
-    </div>
+    <h3>Upcomming Movies</h3>
+    <Slider data={data} />
+  </div>
   );
 }
 
-export default PopularMoviesSlide;
+export default UpcomingMovies;

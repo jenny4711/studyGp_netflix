@@ -26,3 +26,36 @@
   z-index:2;
 
 }
+@media only screen and (max-width:768px){
+  .banner{
+   display:flex;
+   align-items: stretch;
+   width:100%;
+   height:50%;
+     background-size:100% 50%;
+  
+   }
+   .banner::before{
+     position:absolute;
+     display:flex;
+     left:0;
+     width:100%;
+   
+     content:'';
+     padding-top:0px !important;
+     background:linear-gradient(to top, black, transparent)
+   }
+ 
+   .bannerTextArea{
+   
+     width:80%;
+     border-bottom: 2px solid gray;
+     border-width:10%;
+     margin-top:40rem;
+    
+     opacity: 0.8;
+     
+   }
+ 
+ }
+ 

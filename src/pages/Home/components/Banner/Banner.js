@@ -4,7 +4,7 @@ import './Banner.css'
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
 const Banner = () => {
   const {data,isLoading,isError,error}=usePopularMoviesQuery();
-  console.log(data?.results[0],'data')
+  console.log(data?.results[1],'data')
   if(isLoading) {
   <h1>Loading...</h1>
 }
@@ -13,7 +13,7 @@ if(isError) {
 }
   return (
     <div style={{
-      backgroundImage:"url("+`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${data?.results[0].poster_path}`+")",
+      backgroundImage:"url("+`https://www.themoviedb.org/t/p/w1920_and_h800_multi_faces${data?.results[2].poster_path}`+")",
         backgroundRepeat:"no-repeat",
     }}
     className='banner'
