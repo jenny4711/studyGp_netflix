@@ -65,7 +65,7 @@ navigate(`/movies/${movie.id}`,{state:{movie}})
 
      {/* //-------------------------------------------------- */}
       <Col lg={8} xs={12}>
-      <Row>
+      <Row style={{marginBottom:'50px'}}>
         {data?.results.map((movie,index)=>
         <Col onClick={()=>moveToDetail(movie)}  key={index} lg={4} zs={12}>
         
