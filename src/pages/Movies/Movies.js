@@ -17,7 +17,7 @@ const navigate=useNavigate()
   const handlePageChange = ({selected}) => {
    setPage(selected+1)
   };
-
+console.log(data)
 //movie detail 넘어가는 함수
 const moveToDetail = (movie) => {
 navigate(`/movies/${movie.id}`,{state:{movie}})
