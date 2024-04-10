@@ -15,7 +15,7 @@ if(isError) {
 }
 
   return (
-    <div>
+    <div style={{marginTop:'150px'}}>
       <h3>Top Rate Movies</h3>
       <Slider data={data} />
     </div>

@@ -12,7 +12,7 @@ const UpcomingMovies = () => {
     return <Alert variant='danger'>{error.message}</Alert>
   }
   return (
-    <div>
+    <div style={{marginTop:'150px'}}>
     <h3>Upcomming Movies</h3>
     <Slider data={data} />
   </div>
