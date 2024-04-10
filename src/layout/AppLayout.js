@@ -1,10 +1,20 @@
-import React from 'react';
+import React ,{useState}from 'react';
 import { Button ,Container,Form,Nav,Navbar,NavDropdown} from 'react-bootstrap';
-import {Outlet} from 'react-router-dom'
+import {Outlet , useNavigate} from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
 import './AppLayout.css'
 const AppLayout = () => {
+  const [keyword,setKeyword]=useState()
+  const navigate = useNavigate()
+  const searchByKeyword =(evt)=>{
+evt.preventDefault()
+navigate(`/movies?q=${keyword}`)
+setKeyword('')
+//url 바꿔주기
+
+  }
   return (
     <div className='AppLayout' >
     <Navbar bg="dark" variant="dark" expand="lg">
@@ -27,12 +37,14 @@ const AppLayout = () => {
           
          
         </Nav>
-        <Form className="d-flex">
+        <Form className="d-flex" onSubmit={searchByKeyword}>
           <Form.Control
             type="search"
             placeholder="Search"
             className="me-2"
             aria-label="Search"
+            value={keyword}
+            onChange={(evt)=>setKeyword(evt.target.value)}
           />
           <Button variant="outline-danger"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
         </Form>

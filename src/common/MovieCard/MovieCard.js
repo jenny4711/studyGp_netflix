@@ -12,8 +12,8 @@ const pg =
 
   const showGenre=(genreIdList)=>{
 if(!genreData)return[]
-const genreNameList =genreIdList.map((id)=>{
-  const genreObj= genreData.find((genre)=>genre.id === id)
+const genreNameList =genreIdList?.map((id)=>{
+  const genreObj= genreData?.find((genre)=>genre.id === id)
   return genreObj.name
 })
 return genreNameList
@@ -24,19 +24,19 @@ return genreNameList
     style={{
       backgroundImage:
           "url(" +
-          `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.backdrop_path}` +
+          `https://www.themoviedb.org/t/p/w600_and_h900_bestv2${movie?.poster_path}` +
           ")",
       
       }}
       className='movieCard'
     >
     <div className='overlay'>
-      <h3 >{movie.title}</h3>
+      <h3 >{movie?.title}</h3>
       {showGenre(movie.genre_ids).map((id)=><Badge bg='danger'>{id}</Badge>)}
       <div>
-      <div>{movie.vote_average}</div>
-      <div>{movie.popularity}</div>
-      <div>{movie.adult?<img className='under18' src={under18}/>:<img className="under18" src={pg}/>}</div>
+      <div>{movie?.vote_average}</div>
+      <div>{movie?.popularity}</div>
+      <div>{movie?.adult?<img className='under18' src={under18}/>:<img className="under18" src={pg}/>}</div>
     </div>
     </div>
 

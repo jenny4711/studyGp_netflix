@@ -12,3 +12,9 @@ export const fetchUpcomingMovies=async()=>{
 export const genreAPI=async()=>{
   return api.get(`/genre/movie/list?api_key=${API_KEY}`)
 }
+
+
+
+export const fetchSearchMovie=async({page,keyword})=>{
+return keyword?api.get(`/search/movie?query=${keyword}&page=${page}&api_key=${API_KEY}`):api.get(`/movie/popular?page=${page}&api_key=${API_KEY}`)
+}

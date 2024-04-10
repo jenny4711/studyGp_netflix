@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchTopRateMovies,fetchUpcomingMovies,genreAPI } from '../utils/url';
+import { fetchTopRateMovies,fetchUpcomingMovies,genreAPI ,fetchSearchMovie} from '../utils/url';
 
 
 export const useTopRateMovies =()=>{
@@ -25,5 +25,15 @@ export const useMovieGenreQuery =()=>{
     queryFn:genreAPI,
     select:(result)=>result.data.genres,
     staleTime:300000,
+  })
+}
+
+
+export const useSearchMovieQuery =({page,keyword})=>{
+  return useQuery({
+    queryKey:['movie-search',page,keyword],
+    queryFn:()=>fetchSearchMovie({page,keyword}),
+    select:(result)=>result.data
+    
   })
 }

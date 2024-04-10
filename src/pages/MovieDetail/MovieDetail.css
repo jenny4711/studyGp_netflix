@@ -1,0 +1,22 @@
+.MovieDetail{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+margin:16px;
+}
+.MovieDetailRight{
+  display:flex;
+  width:600px;
+  flex-direction: column;
+  margin-left:100px;
+}
+.info{
+  display:flex;
+  flex-direction: row;
+}
+.overview{
+  margin-top:18px;
+  padding:18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}

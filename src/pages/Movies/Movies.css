@@ -1,0 +1,57 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.pagination a {
+  color: white;
+  float: left;
+  background-color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: red;
+  color: black;
+  border: 1px solid red;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: red;
+  color: black;
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  border-color: black;
+}
+ .pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  /* border: 1px solid #ddd; */
+  margin: 0 4px;
+}
+
+.pagination a.active {
+  background-color: red;
+  color: black;
+  border: 1px solid red;
+}
+
+.active > .page-link {
+  background-color: black !important;
+  color: white;
+  border-radius: 100px;
+  border-color:black
+} 
+.page-link{
+  background-color: red;
+  border-radius: 100px;
+}
