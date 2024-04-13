@@ -110,8 +110,7 @@ const genreBtn = async (e, newGenre) => {
 };
 
 //------------------------------------------------------------------
-console.log(result?.results,'result!')
-console.log(data,'data')
+
   if(isLoading) {
     return <h1>isLoading</h1>
   }

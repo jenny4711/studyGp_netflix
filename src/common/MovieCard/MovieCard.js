@@ -4,7 +4,7 @@ import { useMovieGenreQuery } from '../../hooks/useMovies';
 import './MovieCard.css'
 const MovieCard = ({movie,key}) => {
   const {data:genreData}=useMovieGenreQuery()
-  console.log(genreData,'ggg')
+ 
   const under18 =
   "https://st2.depositphotos.com/1431107/11748/v/450/depositphotos_117484062-stock-illustration-under-18-year-rubber-stamp.jpg";
 const pg =

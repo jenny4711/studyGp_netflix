@@ -4,7 +4,7 @@ import './Banner.css'
 import { usePopularMoviesQuery } from '../../../../hooks/usePopularMovies';
 const Banner = () => {
   const {data,isLoading,isError,error}=usePopularMoviesQuery();
-  console.log(data?.results[1],'data')
+  
   if(isLoading) {
   <h1>Loading...</h1>
 }

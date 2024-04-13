@@ -7,7 +7,7 @@ import './Slider.css'
 
 
 const Slider = ({data}) => {
- console.log(data.results)
+
   return (
     <div style={{height:'400px'}}>
    
