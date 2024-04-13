@@ -95,3 +95,7 @@
 .Movies-btn{
   margin-top:20px !important;
 }
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+  margin-left:0 !important;
+}

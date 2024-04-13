@@ -119,7 +119,7 @@ console.log(data,'data')
     return <Alert variant='danger'>{error.message}</Alert>
   }
   return (
-    <Container>
+    <Container className='MoviesContainer'>
      <Row>
      <Col lg={4} xs={12}>
 <Row>
