@@ -9,6 +9,7 @@ import { useReviewMovieQuery,useRecomMovieQuery,useVideoMovieQuery } from '../..
 import MovieRecom from './components/MovieRecom/MovieRecom';
 import MovieReview from './components/MovieReview/MovieReview';
 import Trailer from './components/Trailer/Trailer';
+import { Link, animateScroll as scroll } from 'react-scroll';
 const MovieDetail = () => {
   const location = useLocation();
   const { movie } = location.state;
@@ -27,6 +28,8 @@ const {data:video}=useVideoMovieQuery(movie?.id)
 
 const moveToDetail =(movie)=>{
   navigate(`/movies/${movie.id}`,{state:{movie}})
+  setOpenRm(false)
+  setOpenRv(false)
 }
 
   const showGenre=(genreIdList)=>{
@@ -96,7 +99,9 @@ const moveToDetail =(movie)=>{
         {
         recom?.map((data)=>(
           <Col onClick={()=>moveToDetail(data)} lg={4} xs={12}>
+          
           <MovieRecom data={data} />
+         
           </Col>
         ))
       }
