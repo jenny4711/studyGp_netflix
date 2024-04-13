@@ -25,3 +25,61 @@ margin:16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   border-top: 1px solid rgba(255, 255, 255, 0.5);
 }
+.movieDetailBottom{
+  margin-top:26px;
+ 
+}
+.btns{
+  display:flex;
+  justify-content: center;
+  margin-bottom:26px;
+
+}
+
+.btn1,.btn2{
+  padding:20px;
+  margin:10px;
+  border-radius: 15px;
+}
+.btn1{
+  background-color: white;
+  color:black;
+}
+.btn2{
+  background-color: red;
+  color:white;
+}
+.btn1:active{
+  background-color:red;
+  color:white;
+}
+.btn2:active{
+  background-color: white;
+  color:black;
+
+}
+
+
+ .review .MovieReviewTitle{
+  margin:10px;
+  margin-bottom: 15px;
+}
+
+.none{
+  display:none;
+}
+.reviewDiv,.recomDiv{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap:wrap;
+  align-content:center;
+  align-items: flex-start;
+
+}
+.review,.recom{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}

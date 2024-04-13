@@ -55,3 +55,43 @@
   background-color: red;
   border-radius: 100px;
 }
+
+.hide{
+  display:none
+}
+.yearClick,.closeYear{
+  background-color:red;
+  padding:5px;
+  color:white;
+  border-radius:15px;
+  cursor:pointer;
+}
+.example-thumb{
+  background-color:red;
+  margin-bottom:15px;
+  padding:5px;
+  border-radius:100%;
+}
+.from{
+  margin-top:45px;
+}
+
+
+.genreBtn {
+  background-color: red;
+  padding: 0.5rem;
+  width: 8rem;
+  color:white;
+  margin-bottom: 1rem;
+  border-radius: 13px;
+  background: rgb(240, 37, 8);
+  background: linear-gradient(
+    90deg,
+    rgba(240, 37, 8, 1) 1%,
+    rgba(18, 17, 17, 1) 85%
+  );
+}
+
+.Movies-btn{
+  margin-top:20px !important;
+}

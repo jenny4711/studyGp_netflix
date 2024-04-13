@@ -18,3 +18,16 @@ export const genreAPI=async()=>{
 export const fetchSearchMovie=async({page,keyword})=>{
 return keyword?api.get(`/search/movie?query=${keyword}&page=${page}&api_key=${API_KEY}`):api.get(`/movie/popular?page=${page}&api_key=${API_KEY}`)
 }
+
+
+export const fetchReviewMovie = async(id)=>{
+  return api.get(`/movie/${id}/reviews?api_key=${API_KEY}&page=1`)
+}
+
+export const fetchRecomMovie = async(id)=>{
+  return api.get(`/movie/${id}/recommendations?api_key=${API_KEY}`)
+}
+
+export const fetchVideoMovie = async(id)=>{
+  return api.get(`/movie/${id}/videos?api_key=${API_KEY}&language=en-US`)
+}

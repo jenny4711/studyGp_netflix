@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { fetchTopRateMovies,fetchUpcomingMovies,genreAPI ,fetchSearchMovie} from '../utils/url';
+import { fetchVideoMovie,fetchTopRateMovies,fetchUpcomingMovies,genreAPI ,fetchSearchMovie ,fetchReviewMovie,fetchRecomMovie } from '../utils/url';
 
 
 export const useTopRateMovies =()=>{
@@ -35,5 +35,31 @@ export const useSearchMovieQuery =({page,keyword})=>{
     queryFn:()=>fetchSearchMovie({page,keyword}),
     select:(result)=>result.data
     
+  })
+}
+
+export const useReviewMovieQuery = (id)=>{
+  return useQuery({
+    queryKey:['movie-review',id],
+    queryFn:()=>fetchReviewMovie(id),
+    select:(result)=>result.data.results
+  
+  })
+}
+
+export const useRecomMovieQuery = (id)=>{
+  return useQuery({
+    queryKey:['movie-recom',id],
+    queryFn:()=>fetchRecomMovie(id),
+    select:(result)=>result.data.results
+  
+  })
+}
+export const useVideoMovieQuery = (id)=>{
+  return useQuery({
+    queryKey:['movie-video',id],
+    queryFn:()=>fetchVideoMovie(id),
+    select:(result)=>result.data.results[0]
+  
   })
 }

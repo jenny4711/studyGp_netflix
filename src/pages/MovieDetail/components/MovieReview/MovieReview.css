@@ -1,0 +1,15 @@
+.MovieReview {
+width:60%;
+border: 2px solid red;
+border-radius: 40px;
+padding:15px;
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom:16px;
+}
+.moreBtn {
+  border-bottom: 1px solid white;
+ width:38px;
+  cursor:pointer;
+}
